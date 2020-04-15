@@ -1,0 +1,11 @@
+node_modules
+*/node_modules
+
+// ignore .log files
+*.log
+**/*.log
+
+// ignore test /coverage directories
+packages/ems-api-server/coverage/
+packages/ems-api-dao/coverage/
+packages/graceful-server/coverage/

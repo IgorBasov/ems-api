@@ -1,0 +1,25 @@
+{
+  "name": "ems-api-server",
+  "version": "1.0.0",
+  "description": "EMS-API Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "yarn run test-server-start && jest --config=jest.config.js; yarn run test-server-stop",
+    "test-watch": "EMS_API_SERVER_HOST=localhost EMS_API_SERVER_PORT=3000 EMS_API_HEALTH_CHECK_TOKEN=test jest  --watchAll --config=jest.config.js",
+    "test-server-start": "pm2 start ./test-ecosystem.config.js",
+    "test-server-stop": "pm2 delete ./test-ecosystem.config.js"
+  },
+  "author": "IGBasov",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.5",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "validator": "^12.2.0"
+  },
+  "devDependencies": {
+    "axios": "^0.19.0",
+    "jest": "^24.8.0"
+  }
+}
